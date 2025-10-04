@@ -1,0 +1,26 @@
+{
+  "light": {
+    "--primary-color": "#B0D1F4",
+    "--primary-light-color": "#CCDFFF",
+    "--secondary-color": "#144273",
+    "--secondary-light-color": "#0451A4",
+    "--tertiary-color": "#FFD6AC",
+    "--tertiary-hover-color": "#f9ddc2",
+    "--button-color": "#144273",
+    "--slide-background": "#144273d2",
+    "--slide-color": "#ffc382",
+    "--slide-light-color": "#fad0a2"
+  },
+  "dark": {
+    "--primary-color": "#144273",
+    "--primary-light-color": "#0451A4",
+    "--secondary-color": "#B0D1F4",
+    "--secondary-light-color": "#CCDFFF",
+    "--tertiary-color": "#FFC282",
+    "--tertiary-hover-color": "#d8a56f",
+    "--button-color": "#144273",
+    "--slide-background": "#144273d2",
+    "--slide-color": "#ffc382",
+    "--slide-light-color": "#fad0a2"
+  }
+}

@@ -21,7 +21,7 @@
   ],
   "who_i_am": {
     "title": "Who I am?",
-    "description": ["With ~{years} years of experience building scalable, maintainable, and user-centric web applications, I focus on delivering functional solutions that provide mutual benefits for both clients and users.", "I excel at adapting quickly to new challenges to create efficient and impactful web solutions. I'm also a lifelong student of technology, driven by a deep passion for continuous learning and staying ahead of the latest industry trends. <button>More about me.</button>"]
+    "description": ["With ~{years} years of experience building scalable, maintainable, and user-centric web applications, I focus on delivering functional solutions that provide mutual benefits for both clients and users.", "I excel at adapting quickly to new challenges to create efficient and impactful web solutions. I'm also a lifelong student of technology, driven by a deep passion for continuous learning and staying ahead of the latest industry trends. <a>More about me.</a>"]
   },
   "stack_and_portfolio": {
     "title": "Stack & Portfolio",

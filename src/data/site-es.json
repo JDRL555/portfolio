@@ -23,7 +23,7 @@
     "title": "¿Quién soy?",
     "description": [
       "Con aproximadamente {years} años de experiencia construyendo aplicaciones web escalables, mantenibles y centradas en el usuario, me concentro en entregar soluciones funcionales que aporten beneficios tanto para clientes como para usuarios.",
-      "Me destaco por adaptarme rápidamente a nuevos desafíos para crear soluciones web eficientes e impactantes. También soy un estudiante perpetuo de la tecnología, impulsado por una profunda pasión por el aprendizaje continuo y por mantenerme al día con las últimas tendencias del sector. <button>Más sobre mí.</button>"
+      "Me destaco por adaptarme rápidamente a nuevos desafíos para crear soluciones web eficientes e impactantes. También soy un estudiante perpetuo de la tecnología, impulsado por una profunda pasión por el aprendizaje continuo y por mantenerme al día con las últimas tendencias del sector. <a>Más sobre mí.</a>"
     ]
   },
   "stack_and_portfolio": {

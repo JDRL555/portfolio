@@ -9,7 +9,13 @@ body {
 
 a {
   color: var(--secondary-light-color);
-  text-decoration: none;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: .3s;
+}
+
+a:hover {
+  color: var(--secondary-hover-color);
 }
 
 b {

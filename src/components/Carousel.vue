@@ -3,6 +3,7 @@ import { computed } from 'vue'
 import { useLanguageStore, useCarouselStore } from '../stores'
 import en from '../data/site-en.json'
 import es from '../data/site-es.json'
+import { parseYears } from '../utils/parsers.ts'
 
 const languageStore = useLanguageStore()
 const carousel = useCarouselStore()
@@ -16,10 +17,6 @@ function next() {
 
 function prev() {
   carousel.prevSlide(total.value)
-}
-
-function parseDescription(text: string) {
-  return text.replace('{years}', `${new Date().getFullYear() - 2022}`)
 }
 
 setInterval(() => {
@@ -57,7 +54,7 @@ setInterval(() => {
           :style="{ backgroundColor: 'var(--slide-background)', color: 'var(--slide-color)' }"
         >
           <h2 class="text-6xl text-white font-bold mb-7">{{ slide.title }}</h2>
-          <p class="text-2xl w-2/3 mb-7 text-white" v-html="parseDescription(slide.description)"></p>
+          <p class="text-2xl w-2/3 mb-7 text-white" v-html="parseYears(slide.description)"></p>
           <button class="bg-[var(--tertiary-color)] text-[var(--button-color)] hover:bg-[var(--tertiary-hover-color)] px-6 py-2 rounded font-semibold">
             {{ slide.button }}
           </button>

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 body {
-  background-color: var(--primary-color);
+  background: linear-gradient(180deg, var(--primary-color) 70%, var(--primary-dark-color) 100%);
   color: var(--secondary-color);
   overflow-x: hidden;
   margin: 0;
@@ -52,6 +52,7 @@ svg:hover, button:hover { transform: translateY(-5px); }
   width: var(--scroll-thumb-size);
   height: var(--scroll-thumb-size);
   background: transparent;
+  color: #040e1af1;
 }
 
 ::-webkit-scrollbar-track {

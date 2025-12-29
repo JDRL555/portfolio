@@ -29,17 +29,17 @@
       "contents": [
         {
           "title": "Mentor y educador",
-          "content": "Tuve el privilegio de trabajar como instructor en un programa de diplomatura en desarrollo web. Me encargué de <b style='color: var(--modal-text);'>orientar a la próxima generación de desarrolladores</b>, compartiendo mis conocimientos sobre el ecosistema JavaScript y las tecnologías web fundamentales, como HTML, CSS, NodeJS, MySQL y muchas más.",
+          "content": "Tuve el privilegio de trabajar como instructor en un programa de diplomatura en desarrollo web. Me encargué de <b>orientar a la próxima generación de desarrolladores</b>, compartiendo mis conocimientos sobre el ecosistema JavaScript y las tecnologías web fundamentales, como HTML, CSS, NodeJS, MySQL y muchas más.",
           "image": "/src/assets/images/Diplomado-3.jpg"
         },
         {
           "title": "Dedicados a la excelencia",
-          "content": "No me conformo con 'lo suficientemente bueno', por el contrario, me esfuerzo por <b style='color: var(--modal-text);'>mejorar constantemente mis habilidades</b> y superar los límites de cada proyecto.",
+          "content": "No me conformo con 'lo suficientemente bueno', por el contrario, me esfuerzo por <b>mejorar constantemente mis habilidades</b> y superar los límites de cada proyecto.",
           "image": "/src/assets/images/codigo-3.jpg"
         },
         {
           "title": "Más allá de la certificación",
-          "content": "Mi educación se aceleró realmente al ir <b style='color: var(--modal-text);'>más allá del conocimiento teórico</b> y adentrarme en el ámbito de la creación práctica.",
+          "content": "Mi educación se aceleró realmente al ir <b>más allá del conocimiento teórico</b> y adentrarme en el ámbito de la creación práctica.",
           "image": "/src/assets/images/codigo-4.jpg"
         }
       ]

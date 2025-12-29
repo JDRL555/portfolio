@@ -26,17 +26,17 @@
       "contents": [
         {
           "title": "Mentor & Educator",
-          "content": "I had the privilege of serving as an instructor for a web development diploma program. I was responsible for <b style='color: var(--modal-text);'>guiding the next generation of developers</b>, sharing my expertise in the JavaScript ecosystem and core web technologies, such as HTML, CSS, NodeJS, MySQL, and even more.",
+          "content": "I had the privilege of serving as an instructor for a web development diploma program. I was responsible for <b'>guiding the next generation of developers</b>, sharing my expertise in the JavaScript ecosystem and core web technologies, such as HTML, CSS, NodeJS, MySQL, and even more.",
           "image": "/src/assets/images/Diplomado-3.jpg"
         },
         {
           "title": "Dedicated to Excellence",
-          "content": "I don't settle for 'good enough'; instead, I strive to <b style='color: var(--modal-text);'>constantly improve my skills</b> and push the boundaries of every project.",
+          "content": "I don't settle for 'good enough'; instead, I strive to <b'>constantly improve my skills</b> and push the boundaries of every project.",
           "image": "/src/assets/images/codigo-3.jpg"
         },
         {
           "title": "Beyond Certification",
-          "content": "My education truly accelerated when I went <b style='color: var(--modal-text);'>beyond theoretical knowledge</b> and delved into the realm of practical creation.",
+          "content": "My education truly accelerated when I went <b'>beyond theoretical knowledge</b> and delved into the realm of practical creation.",
           "image": "/src/assets/images/codigo-4.jpg"
         }
       ]

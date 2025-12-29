@@ -21,10 +21,29 @@
   ],
   "who_i_am": {
     "title": "¿Quién soy?",
-    "description": [
-      "Con aproximadamente {years} años de experiencia construyendo aplicaciones web escalables, mantenibles y centradas en el usuario, me concentro en entregar soluciones funcionales que aporten beneficios tanto para clientes como para usuarios.",
-      "Me destaco por adaptarme rápidamente a nuevos desafíos para crear soluciones web eficientes e impactantes. También soy un estudiante perpetuo de la tecnología, impulsado por una profunda pasión por el aprendizaje continuo y por mantenerme al día con las últimas tendencias del sector. <a>Más sobre mí.</a>"
-    ]
+      "description": [
+      "<b>Con aproximadamente {years} años de experiencia</b> construyendo aplicaciones web escalables, mantenibles y centradas en el usuario, me concentro en entregar <b>soluciones funcionales</b> que aporten <b>beneficios tanto para clientes como para usuarios.</b>",
+      "Me destaco por <b>adaptarme rápidamente a nuevos desafíos</b> para crear soluciones web eficientes e impactantes. También soy un estudiante perpetuo de la tecnología, impulsado por una <b>profunda pasión por el aprendizaje continuo</b> y por mantenerme al día con las últimas tendencias del sector. <a class=\"open-modal\" role=\"button\">Más sobre mí.</a>"
+    ],
+    "modal": {
+      "contents": [
+        {
+          "title": "Mentor y educador",
+          "content": "Tuve el privilegio de trabajar como instructor en un programa de diplomatura en desarrollo web. Me encargué de <b style='color: var(--modal-text);'>orientar a la próxima generación de desarrolladores</b>, compartiendo mis conocimientos sobre el ecosistema JavaScript y las tecnologías web fundamentales, como HTML, CSS, NodeJS, MySQL y muchas más.",
+          "image": "/src/assets/images/Diplomado-3.jpg"
+        },
+        {
+          "title": "Dedicados a la excelencia",
+          "content": "No me conformo con 'lo suficientemente bueno', por el contrario, me esfuerzo por <b style='color: var(--modal-text);'>mejorar constantemente mis habilidades</b> y superar los límites de cada proyecto.",
+          "image": "/src/assets/images/codigo-3.jpg"
+        },
+        {
+          "title": "Más allá de la certificación",
+          "content": "Mi educación se aceleró realmente al ir <b style='color: var(--modal-text);'>más allá del conocimiento teórico</b> y adentrarme en el ámbito de la creación práctica.",
+          "image": "/src/assets/images/codigo-4.jpg"
+        }
+      ]
+    }
   },
   "stack_and_portfolio": {
     "title": "Stack y Portafolio",

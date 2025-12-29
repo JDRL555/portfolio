@@ -19,9 +19,7 @@ a:hover {
 }
 
 b {
-  color: var(--slide-color);
   font-weight: bold;
-  color: #fad0a2;
 }
 
 button {
@@ -33,9 +31,47 @@ button {
   font-weight: bold;
   border-radius: 20px;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
+  transition: 0.3s !important;
 }
 
 button:hover {
-  background-color: var(--tertiary-hover-color);
+  background: var(--tertiary-hover-color);
+}
+
+svg, button { transition: transform 0.3s; }
+svg:hover, button:hover { transform: translateY(-5px); }
+
+/* Scrollbar variables */
+:root {
+  --scroll-thumb-color: var(--secondary-color);
+  --scroll-thumb-size: 10px;
+}
+
+/* WebKit browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: var(--scroll-thumb-size);
+  height: var(--scroll-thumb-size);
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb-color);
+  border-radius: 999px;
+  border: 2px solid transparent; /* spacing */
+  background-clip: padding-box;
+  transition: transform 0.12s ease, background-color 0.12s ease;
+}
+
+/* Firefox: limited support — set thin + colors (no hover scale available) */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: var(--scroll-thumb-color) var(--primary-color);
+}
+
+#modal {
+  scrollbar-color: var(--primary-color) transparent;
 }

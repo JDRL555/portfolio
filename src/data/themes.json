@@ -9,7 +9,9 @@
     "--button-color": "#144273",
     "--slide-background": "#0451A4d2",
     "--slide-color": "#ffc382",
-    "--slide-light-color": "#fad0a2"
+    "--slide-light-color": "#fad0a2",
+    "--modal-bg": "#000000c2",
+    "--modal-text": "#0451A4"
   },
   "dark": {
     "--primary-color": "#144273",
@@ -21,6 +23,8 @@
     "--button-color": "#144273",
     "--slide-background": "#144273d2",
     "--slide-color": "#ffc382",
-    "--slide-light-color": "#fad0a2"
+    "--slide-light-color": "#fad0a2",
+    "--modal-bg": "#000000c2",
+    "--modal-text": "#0451A4"
   }
 }

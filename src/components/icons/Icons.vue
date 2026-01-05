@@ -5,8 +5,9 @@
   } from "@tabler/icons-vue";
 
   import { TECH_ICONS, type TechIconName } from "./Techs";
+  import { COMPANY_ICONS, type CompanyIcon } from "./Companies";
 
-  type IconName = TechIconName | 'document';
+  type IconName = TechIconName | CompanyIcon | 'document';
 
   const props = defineProps<{
     width: string;
@@ -16,6 +17,7 @@
 
   const iconMap = {
     ...TECH_ICONS,
+    ...COMPANY_ICONS,
     document: IconFileText,
   }
 

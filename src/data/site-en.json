@@ -49,13 +49,13 @@
       {
         "title": "Bingo Papaya Board",
         "description": "<b>Digital bingo board for real-time game projection</b>. The platform displays the most recent draws and winning patterns. The application automates the process, ensuring a smooth and engaging gaming experience.",
-        "technologies": ["React", "Flask", "MongoDB"],
+        "technologies": ["Javascript", "React", "Flask", "MongoDB"],
         "img": "/src/assets/images/projects/bingo_papaya.png"
       },
       {
         "title": "Academia Valentina App",
         "description": "Developed a <b>comprehensive mobile application for managing baking and cooking courses</b>. The app includes features for courses purchase, and take a survey to get the certificate, enhancing operational efficiency and user experience, including admin and teacher panel for content and courses management.",
-        "technologies": ["React", "TypeScript", "Django", "PostgreSQL", "MongoDB"],
+        "technologies": ["TypeScript", "React", "Django", "PostgreSQL", "MongoDB"],
         "img": "/src/assets/images/projects/academia_valentina.jpeg"
       },
       {
@@ -71,7 +71,7 @@
       "job_title": "Support Analyst",
       "company": {
         "name": "ADN Software",
-        "logo": "/src/assets/companies/adnsoftware.svg"
+        "logo": "/src/assets/images/companies/adn_software.svg"
       },
       "period": "Apr 2025 - May 2025",
       "details": [
@@ -84,9 +84,9 @@
       "job_title": "Full-Stack Developer",
       "company": {
         "name": "Kunaisoft",
-        "logo": "/src/assets/companies/kunaisoft.svg"
+        "logo": "/src/assets/images/companies/kunaisoft.svg"
       },
-      "period": "Sep 2023 - Nowdays",
+      "period": "Sep 2023 - Jan 2026",
       "details": [
         "Creation and development of a back-office platform for a <b>Unified Threat Management (UTM) system.</b>",
         "Seamless <b>data migration between websites</b>, ensuring data integrity and full service availability."
@@ -97,7 +97,7 @@
       "job_title": "Full-Stack and Instructor",
       "company": {
         "name": "TIDV Tech",
-        "logo": "/src/assets/companies/tidvtech.svg"
+        "logo": "/src/assets/images/companies/tidv_tech.svg"
       },
       "period": "Feb 2022 - Aug 2023",
       "details": [

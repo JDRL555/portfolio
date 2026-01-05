@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import Icons from './icons/Icons.vue'
-import { TECH_ICONS, type TechIconName } from './icons/Techs'
+import { TECH_ICONS, type TechIconName } from './icons/Techs/Techs'
 
 const props = defineProps<{
   projects: {
@@ -78,7 +78,7 @@ const getIconName = (tech: string): TechIconName | null => {
           <div 
             v-for="tech in project.technologies" 
             :key="tech"
-            class="text-slate-600 hover:text-blue-600 transition-colors"
+            class="text-slate-600 hover:text-[var(--primary-color)] transition-colors"
             :title="tech"
           >
             <Icons 

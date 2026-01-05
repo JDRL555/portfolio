@@ -7,6 +7,9 @@ import {
   IconBrandReact,
   IconBrandNextjs,
   IconBrandVue,
+  IconBrandTailwind,
+  IconFileSpreadsheet,
+  IconTerminal2,
   IconBrandLaravel,
   IconBrandMysql,
   IconBrandMongodb
@@ -23,6 +26,9 @@ export type TechIconName =
   | 'react'
   | 'nextjs'
   | 'vue'
+  | 'tailwind'
+  | 'excel'
+  | 'make'
   | 'fastapi'
   | 'flask'
   | 'django'
@@ -42,7 +48,10 @@ export const LANGUAGES = {
 export const FRONTEND = {
   react: IconBrandReact,
   nextjs: IconBrandNextjs,
-  vue: IconBrandVue
+  vue: IconBrandVue,
+  tailwind: IconBrandTailwind,
+  excel: IconFileSpreadsheet,
+  make: IconTerminal2
 }
 
 export const BACKEND = {

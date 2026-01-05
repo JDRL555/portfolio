@@ -74,7 +74,7 @@
       "job_title": "Analista de Soporte",
       "company": {
         "name": "ADN Software",
-        "logo": "/src/assets/companies/adnsoftware.svg"
+        "logo": "/src/assets/images/companies/adn_software.svg"
       },
       "period": "Abr 2025 - May 2025",
       "details": [
@@ -87,9 +87,9 @@
       "job_title": "Desarrollador Full-Stack",
       "company": {
         "name": "Kunaisoft",
-        "logo": "/src/assets/companies/kunaisoft.svg"
+        "logo": "/src/assets/images/companies/kunaisoft.svg"
       },
-      "period": "Sep 2023 - Actualidad",
+      "period": "Sep 2023 - Ene 2026",
       "details": [
         "Creación y desarrollo de una plataforma back-office para un <b>sistema Unified Threat Management (UTM).</b>",
         "Migración de datos sin interrupciones entre sitios web, garantizando la integridad de los datos y la disponibilidad total del servicio."
@@ -100,7 +100,7 @@
       "job_title": "Full-Stack e Instructor",
       "company": {
         "name": "TIDV Tech",
-        "logo": "/src/assets/companies/tidvtech.svg"
+        "logo": "/src/assets/images/companies/tidv_tech.svg"
       },
       "period": "Feb 2022 - Ago 2023",
       "details": [

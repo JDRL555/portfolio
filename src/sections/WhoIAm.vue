@@ -2,6 +2,7 @@
   import { parseYears } from '../utils/parsers';
   import Icons from '../components/icons/Icons.vue';
   import Modal from '../components/Modal.vue';
+  import SectionLayout from './SectionLayout.vue';
 
   const { content } = defineProps<{
     content: {

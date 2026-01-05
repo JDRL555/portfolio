@@ -8,9 +8,10 @@
     DATABASE, 
     OTHER_TOOLS, 
     type TechIconName 
-  } from '../components/icons/Techs'
+  } from '../components/icons/Techs/Techs'
   import { IconX } from '@tabler/icons-vue'
   import ProjectsBento from '../components/ProjectsBento.vue'
+  import SectionLayout from './SectionLayout.vue'
   
   const { content } = defineProps<{
     content: {

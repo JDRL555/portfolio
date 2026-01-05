@@ -50,23 +50,22 @@
     "items": ["Languages", "Frontend", "Backend", "Databases", "Other Tools"],
     "projects": [
       {
-        "title": "Push Hands Dashboard",
-        "description": "Diseñé y desarrollé un panel de usuario para el proyecto 'My Passion Index'. <b>La plataforma permite a los usuarios gestionar eventos, organizaciones y contenido de blog</b>, optimizando la interacción con los datos y la administración.",
-        "technologies": ["React", "TypeScript", "Sass"]
-      },
-      {
         "title": "Tablero de Bingo Papaya",
         "description": "<b>Tablero de bingo digital para proyección de juego en tiempo real</b>. La plataforma muestra los sorteos más recientes y patrones ganadores. La aplicación automatiza el proceso, asegurando una experiencia de juego fluida y atractiva.",
-        "technologies": ["React", "Flask", "MongoDB"]
+        "technologies": ["Javascript", "React", "Flask", "MongoDB"],
+        "img": "/src/assets/images/projects/bingo_papaya.png"
       },
       {
         "title": "Academia Valentina App",
         "description": "Desarrollé una <b>aplicación móvil integral para la gestión de cursos de repostería y cocina</b>. La app incluye funciones para la compra de cursos y realizar una encuesta para obtener el certificado, mejorando la eficiencia operativa y la experiencia del usuario, e incluye paneles de administrador y docente para la gestión de contenidos y cursos.",
-        "technologies": ["ReactNative", "TypeScript", "Django", "PostgreSQL", "MongoDB"]
+        "technologies": ["TypeScript", "React", "Django", "PostgreSQL", "MongoDB"],
+        "img": "/src/assets/images/projects/academia_valentina.jpeg"
       },
       {
         "title": "MAVET Posts",
-        "description": "Desarrollé una plataforma pública para el 'Museo de Artes Visuales y del Espacio del Táchira' (MAVET). Este sistema robusto gestiona y muestra públicamente colecciones de arte, eventos, cursos y contenido educativo."
+        "description": "Desarrollé una plataforma pública para el 'Museo de Artes Visuales y del Espacio del Táchira' (MAVET). Este sistema robusto gestiona y muestra públicamente colecciones de arte, eventos, cursos y contenido educativo.",
+        "technologies": ["Python", "Flask", "MySQL"],
+        "img": "/src/assets/images/projects/mavet.png"
       }
     ]
   },

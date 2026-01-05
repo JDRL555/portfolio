@@ -41,6 +41,12 @@ button:hover {
 svg, button { transition: transform 0.3s; }
 svg:hover, button:hover { transform: translateY(-5px); }
 
+hr {
+  width: 90%;
+  margin: auto;
+  margin-left: 6%;
+}
+
 /* Scrollbar variables */
 :root {
   --scroll-thumb-color: var(--secondary-color);

@@ -47,23 +47,22 @@
     "items": ["Languages", "Frontend", "Backend", "Databases", "Other Tools"],
     "projects": [
       {
-        "title": "Push Hands Dashboard",
-        "description": "Designed and developed a user dashboard for the 'My Passion Index' project. <b>The platform allows users to handle events, organizations, and blog content</b>, optimizing data interaction and administration.",
-        "technologies": ["React", "TypeScript", "Sass"]
-      },
-      {
         "title": "Bingo Papaya Board",
         "description": "<b>Digital bingo board for real-time game projection</b>. The platform displays the most recent draws and winning patterns. The application automates the process, ensuring a smooth and engaging gaming experience.",
-        "technologies": ["React", "Flask", "MongoDB"]
+        "technologies": ["React", "Flask", "MongoDB"],
+        "img": "/src/assets/images/projects/bingo_papaya.png"
       },
       {
         "title": "Academia Valentina App",
         "description": "Developed a <b>comprehensive mobile application for managing baking and cooking courses</b>. The app includes features for courses purchase, and take a survey to get the certificate, enhancing operational efficiency and user experience, including admin and teacher panel for content and courses management.",
-        "technologies": ["ReactNative", "TypeScript", "Django", "PostgreSQL", "MongoDB"]
+        "technologies": ["React", "TypeScript", "Django", "PostgreSQL", "MongoDB"],
+        "img": "/src/assets/images/projects/academia_valentina.jpeg"
       },
       {
         "title": "MAVET Posts",
-        "description": "Developed a public-facing platform for the 'Museo de Artes Visuales y del Espacio del Táchira' (MAVET). This robust system handles the <b>management and public display of art collections, events, courses, and educational content.</b>"
+        "description": "Developed a public-facing platform for the 'Museo de Artes Visuales y del Espacio del Táchira' (MAVET). This robust system handles the <b>management and public display of art collections, events, courses, and educational content.</b>",
+        "technologies": ["Python", "Flask", "MySQL"],
+        "img": "/src/assets/images/projects/mavet.png"
       }
     ]
   },

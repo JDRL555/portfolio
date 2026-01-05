@@ -11,6 +11,7 @@ import themes from './data/themes.json'
 
 import Carousel from './components/Carousel.vue'
 import WhoIAm from './sections/WhoIAm.vue'
+import StackAndPortfolio from './sections/Stack&Porfolio.vue'
   
 const themeStore = useThemeStore()
 const languageStore = useLanguageStore()
@@ -41,6 +42,9 @@ const content = computed(() => languageStore.language === "en" ? en : es)
 
     <!-- Who I Am section -->
     <WhoIAm :content="content" />
+    <hr>
+    <!-- Stack&Portfolio -->
+    <StackAndPortfolio :content="content" />
   </main>
 </template>
 

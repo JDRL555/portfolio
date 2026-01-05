@@ -1,9 +1,12 @@
 <script setup lang="ts">
-  import GithubIcon from './GithubIcon.vue'
-  import LinkedinIcon from './LinkedinIcon.vue'
-  import DocumentIcon from './DocumentIcon.vue'
+  import { computed } from 'vue';
+  import {  
+    IconFileText, 
+  } from "@tabler/icons-vue";
 
-  type IconName = 'github' | 'linkedin' | 'document'
+  import { TECH_ICONS, type TechIconName } from "./Techs";
+
+  type IconName = TechIconName | 'document';
 
   const props = defineProps<{
     width: string;
@@ -12,12 +15,11 @@
   }>();
 
   const iconMap = {
-    github: GithubIcon,
-    linkedin: LinkedinIcon,
-    document: DocumentIcon
+    ...TECH_ICONS,
+    document: IconFileText,
   }
 
-  const currentIcon = iconMap[props.iconName as keyof typeof iconMap]
+  const currentIcon = computed(() => iconMap[props.iconName as keyof typeof iconMap])
 </script>
 
 <template>
@@ -25,5 +27,6 @@
     :is="currentIcon" 
     :width="props.width"
     :height="props.height"
+    stroke-width="1.25"
   />
 </template>

@@ -14,8 +14,10 @@ const form = ref({
 });
 
 const submitForm = () => {
-  if (!form.value.email || !form.value.fullName) return;
 
+  const anyEmpty = Object.values(form.value).some(value => value === '');
+  if(anyEmpty) { return; }
+  
   // TU EMAIL PERSONAL AQUÍ (Destino)
   const myEmail = 'joshuleal3@gmail.com'; 
 
@@ -40,34 +42,44 @@ const clearForm = () => {
 </script>
 
 <template>
-  <div class="bg-[var(--primary-color-light)] p-8 rounded-3xl border-2 border-[var(--primary-color)] shadow-lg transition-all duration-300">
+  <form @submit.prevent="submitForm" class="bg-[var(--primary-color)] p-8 rounded-3xl border-2 border-[var(--primary-color)] shadow-lg transition-all duration-300 hover:-translate-y-2">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       
       <div class="flex flex-col">
-        <label class="font-bold text-[var(--text-color)] mb-2">{{ labels.full_name.label }}</label>
+        <label class="font-bold text-lg text-[var(--text-color)] mb-2">
+          {{ labels.full_name.label }} <span class="text-red-400">*</span>
+        </label>
         <input 
           v-model="form.fullName"
-          type="text" 
+          required
+          type="text"
+          minlength="12" 
           :placeholder="labels.full_name.placeholder"
           class="p-3 rounded-xl border border-gray-300 outline-none focus:border-[var(--secondary-color)]"
         >
       </div>
 
       <div class="flex flex-col">
-        <label class="font-bold text-[var(--text-color)] mb-2">{{ labels.email.label }}</label>
+        <label class="font-bold text-lg text-[var(--text-color)] mb-2">
+          {{ labels.email.label }} <span class="text-red-400">*</span>
+        </label>
         <input 
           v-model="form.email"
+          required
           type="email" 
           :placeholder="labels.email.placeholder"
-          class="p-3 rounded-xl border border-gray-300 outline-none focus:border-[var(--secondary-color)]"
+          class="p-3 rounded-xl border text-lg border-gray-300 outline-none focus:border-[var(--secondary-color)]"
         >
       </div>
 
       <div class="flex flex-col">
-        <label class="font-bold text-[var(--text-color)] mb-2">{{ labels.consult_type.label }}</label>
+        <label class="font-bold text-lg text-[var(--text-color)] mb-2">
+          {{ labels.consult_type.label }} <span class="text-red-400">*</span>
+        </label>
         <select 
           v-model="form.consultType"
-          class="p-3 rounded-xl border border-gray-300 bg-white outline-none focus:border-[var(--secondary-color)]"
+          required
+          class="p-3 rounded-xl border text-lg border-gray-300 bg-white outline-none focus:border-[var(--secondary-color)]"
         >
           <option value="" disabled selected>{{ labels.consult_type.placeholder }}</option>
           <option v-for="opt in labels.consult_type.options" :key="opt" :value="opt">{{ opt }}</option>
@@ -75,10 +87,13 @@ const clearForm = () => {
       </div>
 
       <div class="flex flex-col">
-        <label class="font-bold text-[var(--text-color)] mb-2">{{ labels.bussiness_type.label }}</label>
+        <label class="font-bold text-lg text-[var(--text-color)] mb-2">
+          {{ labels.bussiness_type.label }} <span class="text-red-400">*</span>
+        </label>
         <select 
           v-model="form.businessType"
-          class="p-3 rounded-xl border border-gray-300 bg-white outline-none focus:border-[var(--secondary-color)]"
+          required
+          class="p-3 rounded-xl border text-lg border-gray-300 bg-white outline-none focus:border-[var(--secondary-color)]"
         >
           <option value="" disabled selected>{{ labels.bussiness_type.placeholder }}</option>
           <option v-for="opt in labels.bussiness_type.options" :key="opt" :value="opt">{{ opt }}</option>
@@ -87,19 +102,22 @@ const clearForm = () => {
     </div>
 
     <div class="flex flex-col mt-6">
-      <label class="font-bold text-[var(--text-color)] mb-2">{{ labels.consult_details.label }}</label>
+      <label class="font-bold text-lg text-[var(--text-color)] mb-2">
+        {{ labels.consult_details.label }} <span class="text-red-400">*</span>
+      </label>
       <textarea 
         v-model="form.details"
+        required
         rows="4"
         :placeholder="labels.consult_details.placeholder"
-        class="p-3 rounded-xl border border-gray-300 outline-none focus:border-[var(--secondary-color)] resize-none"
+        class="p-3 rounded-xl border text-lg border-gray-300 outline-none focus:border-[var(--secondary-color)] resize-none"
       ></textarea>
     </div>
 
     <div class="flex gap-4 mt-8">
       <button 
         @click="clearForm"
-        class="px-6 py-3 rounded-xl border-2 border-orange-300 text-orange-500 font-bold bg-white hover:bg-orange-50 transition-colors"
+        class="px-6 py-3 rounded-xl transition-colors !bg-[var(--primary-color)] border-2 !border-[var(--tertiary-color)] !text-[var(--tertiary-color)]"
       >
         {{ labels.buttons.clear }}
       </button>
@@ -107,8 +125,8 @@ const clearForm = () => {
         @click="submitForm"
         class="px-8 py-3 rounded-xl bg-orange-300 text-gray-800 font-bold hover:bg-orange-400 transition-colors shadow-md"
       >
-        {{ labels.buttons.submit }} via Email
+        {{ labels.buttons.submit }}
       </button>
     </div>
-  </div>
+  </form>
 </template>

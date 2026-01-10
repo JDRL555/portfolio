@@ -74,12 +74,12 @@ const clearForm = () => {
 </script>
 
 <template>
-  <div class="bg-[var(--primary-color-light)] p-8 rounded-3xl border-2 border-[var(--primary-color)] shadow-lg">
+  <form @submit.prevent="submitForm" class="bg-[var(--primary-color)] p-8 rounded-3xl border-2 border-[var(--primary-color)] shadow-lg transition-all duration-300 hover:-translate-y-2">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       
       <!-- Phone Input with Country Code -->
       <div class="flex flex-col">
-        <label class="font-bold text-[var(--text-color)] mb-2">WhatsApp Number</label>
+        <label class="font-bold text-lg text-[var(--text-color)] mb-2">WhatsApp Number <span class="text-red-400">*</span></label>
 
         <div class="flex gap-2 relative">
           
@@ -87,11 +87,11 @@ const clearForm = () => {
           <div 
             @click="isDropdownOpen = !isDropdownOpen"
             ref="dropdownRef"
-            class="flex items-center justify-between p-3 rounded-xl border border-gray-300 w-[160px] bg-white cursor-pointer select-none hover:border-[var(--secondary-color)]"
+            class="flex items-center justify-between p-3 rounded-xl border border-gray-300 w-[160px] bg-[var(--secondary-light-color)] cursor-pointer select-none hover:border-[var(--secondary-color)]"
           >
             <div class="flex items-center gap-2">
               <img :src="selectedCountry.flag" class="w-6 h-4 object-cover rounded-sm" v-if="selectedCountry.flag">
-              <span class="text-sm font-medium text-gray-600">{{ selectedCountry.code }}</span>
+              <span class="text-lg font-medium text-gray-600">{{ selectedCountry.code }}</span>
             </div>
             <!-- Arrow icon -->
             <span class="text-gray-500 text-xs transform transition-transform" :class="{ 'rotate-180': isDropdownOpen }">▼</span>
@@ -100,7 +100,7 @@ const clearForm = () => {
           <!-- Custom Dropdown Options -->
           <ul 
             v-if="isDropdownOpen"
-            class="absolute top-full left-0 mt-2 w-[180px] max-h-60 overflow-y-auto bg-white border border-gray-300 rounded-xl shadow-xl z-50 py-1"
+            class="absolute top-full left-0 mt-2 w-[180px] max-h-60 overflow-y-auto bg-[var(--secondary-light-color)] border border-gray-300 rounded-xl shadow-xl z-50 py-1"
           >
             <li 
               v-for="c in formatedCountries" 
@@ -124,28 +124,31 @@ const clearForm = () => {
 
           <input 
             v-model="form.phone"
-            type="tel" 
-            placeholder="412 123 4567"
-            class="p-3 rounded-xl border border-gray-300 w-full outline-none focus:border-[var(--secondary-color)]"
+            required
+            type="number" 
+            placeholder="4121234567"
+            class="p-3 rounded-xl border text-lg border-gray-300 w-full outline-none focus:border-[var(--secondary-color)]"
           >
         </div>
       </div>
 
       <div class="flex flex-col">
-        <label class="font-bold text-[var(--text-color)] mb-2">{{ labels.full_name.label }}</label>
+        <label class="font-bold text-lg text-[var(--text-color)] mb-2">{{ labels.full_name.label }} <span class="text-red-400">*</span></label>
         <input 
           v-model="form.fullName"
+          required
           type="text" 
           :placeholder="labels.full_name.placeholder"
-          class="p-3 rounded-xl border border-gray-300 outline-none focus:border-[var(--secondary-color)]"
+          class="p-3 rounded-xl border text-lg border-gray-300 outline-none focus:border-[var(--secondary-color)]"
         >
       </div>
 
       <div class="flex flex-col">
-        <label class="font-bold text-[var(--text-color)] mb-2">{{ labels.consult_type.label }}</label>
+        <label class="font-bold text-lg text-[var(--text-color)] mb-2">{{ labels.consult_type.label }} <span class="text-red-400">*</span></label>
         <select 
           v-model="form.consultType"
-          class="p-3 rounded-xl border border-gray-300 bg-white outline-none focus:border-[var(--secondary-color)]"
+          required
+          class="p-3 rounded-xl border text-lg border-gray-300 bg-white outline-none focus:border-[var(--secondary-color)]"
         >
           <option value="" disabled selected>{{ labels.consult_type.placeholder }}</option>
           <option v-for="opt in labels.consult_type.options" :key="opt" :value="opt">{{ opt }}</option>
@@ -153,10 +156,11 @@ const clearForm = () => {
       </div>
 
       <div class="flex flex-col">
-        <label class="font-bold text-[var(--text-color)] mb-2">{{ labels.bussiness_type.label }}</label>
+        <label class="font-bold text-lg text-[var(--text-color)] mb-2">{{ labels.bussiness_type.label }} <span class="text-red-400">*</span></label>
         <select 
           v-model="form.businessType"
-          class="p-3 rounded-xl border border-gray-300 bg-white outline-none focus:border-[var(--secondary-color)]"
+          required
+          class="p-3 rounded-xl border text-lg border-gray-300 bg-white outline-none focus:border-[var(--secondary-color)]"
         >
           <option value="" disabled selected>{{ labels.bussiness_type.placeholder }}</option>
           <option v-for="opt in labels.bussiness_type.options" :key="opt" :value="opt">{{ opt }}</option>
@@ -165,19 +169,21 @@ const clearForm = () => {
     </div>
 
     <div class="flex flex-col mt-6">
-      <label class="font-bold text-[var(--text-color)] mb-2">{{ labels.consult_details.label }}</label>
+      <label class="font-bold text-lg text-[var(--text-color)] mb-2">{{ labels.consult_details.label }} <span class="text-red-400">*</span></label>
       <textarea 
         v-model="form.details"
+        required
         rows="4"
         :placeholder="labels.consult_details.placeholder"
-        class="p-3 rounded-xl border border-gray-300 outline-none focus:border-[var(--secondary-color)] resize-none"
+        class="p-3 rounded-xl border text-lg border-gray-300 outline-none focus:border-[var(--secondary-color)] resize-none"
       ></textarea>
     </div>
 
     <div class="flex gap-4 mt-8">
       <button 
+        type="button"
         @click="clearForm"
-        class="px-6 py-3 rounded-xl border-2 border-orange-300 text-orange-500 font-bold bg-white hover:bg-orange-50 transition-colors"
+        class="px-6 py-3 rounded-xl transition-colors !bg-[var(--primary-color)] border-2 !border-[var(--tertiary-color)] !text-[var(--tertiary-color)]"
       >
         {{ labels.buttons.clear }}
       </button>
@@ -188,5 +194,5 @@ const clearForm = () => {
         {{ labels.buttons.submit }} via WhatsApp
       </button>
     </div>
-  </div>
+  </form>
 </template>

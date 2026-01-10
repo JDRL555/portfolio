@@ -47,6 +47,11 @@ hr {
   margin-left: 6%;
 }
 
+input, select, textarea {
+  background-color: var(--secondary-light-color);
+  color: var(--primary-color);
+}
+
 /* Scrollbar variables */
 :root {
   --scroll-thumb-color: var(--secondary-color);

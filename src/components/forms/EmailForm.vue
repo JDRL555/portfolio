@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
+import { useThemeStore } from '../../stores';
 
 const props = defineProps<{
   labels: any
@@ -12,6 +13,9 @@ const form = ref({
   businessType: '',
   details: ''
 });
+
+const store = useThemeStore()
+const buttonColors = ref(store.theme === 'dark' ? '!border-[var(--tertiary-color)] !text-[var(--tertiary-color)]' : '')
 
 const submitForm = () => {
 
@@ -39,6 +43,10 @@ const clearForm = () => {
     details: ''
   };
 };
+
+watch(store, (newStore) => {
+  buttonColors.value = newStore.theme === 'dark' ? '!border-[var(--tertiary-color)] !text-[var(--tertiary-color)]' : ''
+});
 </script>
 
 <template>
@@ -117,7 +125,8 @@ const clearForm = () => {
     <div class="flex gap-4 mt-8">
       <button 
         @click="clearForm"
-        class="px-6 py-3 rounded-xl transition-colors !bg-[var(--primary-color)] border-2 !border-[var(--tertiary-color)] !text-[var(--tertiary-color)]"
+        class="px-6 py-3 rounded-xl transition-colors !bg-[var(--primary-color)] border-2"
+        :class="buttonColors"
       >
         {{ labels.buttons.clear }}
       </button>

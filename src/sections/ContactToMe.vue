@@ -34,9 +34,7 @@ const contactMethod = ref<"email" | "whatsapp">("email");
             ></p>
           </div>
 
-          <div
-            class="flex items-center justify-center m-auto gap-6 p-4"
-          >
+          <div class="flex items-center justify-center m-auto gap-6 p-4">
             <!-- Toggle Icons -->
             <button
               @click="contactMethod = 'email'"
@@ -44,7 +42,7 @@ const contactMethod = ref<"email" | "whatsapp">("email");
               :class="
                 contactMethod === 'email'
                   ? 'shadow-inner'
-                  : '!bg-transparent !text-white !border-none'
+                  : '!bg-transparent !text-[var(--secondary-color)] !border-none'
               "
             >
               <Icons width="70" height="70" icon-name="email" />
@@ -56,8 +54,8 @@ const contactMethod = ref<"email" | "whatsapp">("email");
               class="p-3 rounded-full transition-all duration-300 hover:scale-110"
               :class="
                 contactMethod === 'whatsapp'
-                  ? 'bshadow-inner'
-                  : '!bg-transparent !text-white !border-none'
+                  ? 'shadow-inner'
+                  : '!bg-transparent !text-[var(--secondary-color)] !border-none'
               "
             >
               <Icons width="70" height="70" icon-name="whatsapp" />

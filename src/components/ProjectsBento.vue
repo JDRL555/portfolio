@@ -11,6 +11,7 @@ const props = defineProps<{
     img?: string
   }[]
   filter: Set<string>
+  not_found: string
 }>()
 
 const filteredProjects = computed(() => {
@@ -95,7 +96,7 @@ const getIconName = (tech: string): TechIconName | null => {
     
     <!-- Empty State -->
     <div v-if="filteredProjects.length === 0" class="col-span-full text-center py-10 text-xl text-white opacity-80">
-      No projects found with the selected technologies.
+      {{ not_found }}
     </div>
   </div>
 </template>

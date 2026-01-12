@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 body {
-  background: linear-gradient(180deg, var(--primary-color) 70%, var(--primary-dark-color) 100%);
+  background: linear-gradient(180deg, var(--primary-color) 70%, var(--body-gradient-end) 100%);
   color: var(--secondary-color);
   overflow-x: hidden;
   margin: 0;
@@ -48,8 +48,8 @@ hr {
 }
 
 input, select, textarea {
-  background-color: var(--secondary-light-color);
-  color: var(--primary-color);
+  background-color: var(--input-bg);
+  color: var(--input-text);
 }
 
 /* Scrollbar variables */

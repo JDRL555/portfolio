@@ -6,6 +6,8 @@ import en from './data/site-en.json'
 import es from './data/site-es.json'
 import themes from './data/themes.json'
 
+import NavigationSidebar from './components/NavigationSidebar.vue'
+
 // import ThemeToggle from './components/ThemeToggle.vue'
 // import LanguageToggle from './components/LanguageToggle.vue'
 
@@ -51,20 +53,31 @@ const content = computed(() => languageStore.language === "en" ? en : es)
 </script>
 
 <template>
+  <NavigationSidebar />
   <main>
-    <Carousel />
+    <div id="home">
+      <Carousel />
+    </div>
 
     <!-- Who I Am section -->
-    <WhoIAm :content="content" />
+    <div id="who-i-am">
+      <WhoIAm :content="content" />
+    </div>
     <hr>
     <!-- Stack&Portfolio -->
-    <StackAndPortfolio :content="content" />
+    <div id="stack-portfolio">
+      <StackAndPortfolio :content="content" />
+    </div>
     <hr>
     <!-- Experience -->
-    <Experience :content="content" />
+    <div id="experience">
+      <Experience :content="content" />
+    </div>
     <hr>
     <!-- Contact Me -->
-    <ContactToMe :content="content" />
+    <div id="contact-me">
+      <ContactToMe :content="content" />
+    </div>
   </main>
 </template>
 

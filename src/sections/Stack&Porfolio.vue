@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  import { ref } from 'vue'
+  import { ref, watch } from 'vue'
   import Icons from '../components/icons/Icons.vue'
   import { 
     LANGUAGES, 
@@ -11,7 +11,7 @@
   } from '../components/icons/Techs/Techs'
   import { IconX } from '@tabler/icons-vue'
   import ProjectsBento from '../components/ProjectsBento.vue'
-  import SectionLayout from './SectionLayout.vue'
+  import { useThemeStore } from '../stores'
   
   const { content } = defineProps<{
     content: {
@@ -27,9 +27,15 @@
             description: string;
             technologies?: undefined;
         })[];
+        not_found: string;
     };
     }
   }>()
+
+  const store = useThemeStore();
+
+  const iconColors = ref(store.theme === 'dark' ? '!text-[var(--primary-color)]' : '')
+  const textColors = ref(store.theme === 'dark' ? ' !text-white' : '')
 
   const techGroups: Record<string, Record<string, any>> = {
     'Languages': LANGUAGES,
@@ -63,6 +69,11 @@
     Object.keys(group).forEach(tech => selectedTechs.value.delete(tech))
   }
 
+  watch(store, newStore => {
+    iconColors.value = newStore.theme === 'dark' ? '!text-[var(--primary-color)]' : ''
+    textColors.value = newStore.theme === 'dark' ? ' !text-white' : ''
+  })
+
 </script>
 
 <template>
@@ -83,7 +94,7 @@
                 'px-4 py-2 rounded-full mr-2 mb-2 transition flex items-center gap-2',
                 isCategorySelected(item) 
                   ? 'bg-[var(--tertiary-color)] text-[var(--button-color)]' 
-                  : '!bg-transparent !border-none !text-white hover:!bg-[var(--primary-color-dark)]'
+                  : '!bg-transparent !border-none hover:!bg-[var(--primary-color-dark)]' + textColors
               ]"
             >
               {{ item }}
@@ -111,7 +122,7 @@
                   :class="[
                     '!p-2 !rounded-lg transition-colors flex items-center justify-center !bg-transparent !border-none !m-0 !min-w-0 !min-h-0',
                     selectedTechs.has(name as string) 
-                      ? '!text-[var(--primary-color)]' 
+                      ? iconColors
                       : 'hover:!bg-[var(--tertiary-hover-color)] !text-black'
                   ]"
                   :title="name as string"
@@ -128,8 +139,9 @@
         </div>
 
         <ProjectsBento 
-          :projects="content.stack_and_portfolio.projects" 
+          :projects="content.stack_and_portfolio.projects"
           :filter="selectedTechs" 
+          :not_found="content.stack_and_portfolio.not_found"
         />
       </div>
     </div>

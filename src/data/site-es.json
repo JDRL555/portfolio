@@ -67,7 +67,8 @@
         "technologies": ["Python", "Flask", "MySQL"],
         "img": "/src/assets/images/projects/mavet.png"
       }
-    ]
+    ],
+    "not_found": "No se encontraron proyectos con las tecnologías seleccionadas."
   },
   "experience": [
     {
@@ -117,6 +118,10 @@
       "full_name": {
         "label": "Nombre completo",
         "placeholder": "Jonh Doe"
+      },
+      "phone": {
+        "label": "Número de Whatsapp",
+        "placeholder": "+1234567890"
       },
       "email": {
         "label": "Correo",

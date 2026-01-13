@@ -2,7 +2,7 @@
 import { ref, watch } from 'vue';
 import { useThemeStore, useLanguageStore } from '../../stores';
 
-const props = defineProps<{
+defineProps<{
   labels: any
 }>();
 

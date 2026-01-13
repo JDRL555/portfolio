@@ -4,7 +4,7 @@ import { useCountryStore, useThemeStore, useLanguageStore } from "../../stores";
 import { parseCountriesNumber } from "../../utils/parsers";
 import type { FormattedCountry } from "../../services/CountriesAPI";
 
-const props = defineProps<{
+defineProps<{
   labels: any;
 }>();
 

@@ -1,0 +1,168 @@
+{
+  "slide": [
+    {
+      "title": "Desarrollador Full-Stack",
+      "description": "Más de {years} años construyendo <b>proyectos profesionales y únicos, dando vida a ideas</b>. Desde interfaces impactantes hasta lógica empresarial compleja.",
+      "button": "Mi experiencia",
+      "link": "/#experience",
+      "target_blank": false,
+      "image": "/src/assets/images/slides/background-1.jpg"
+    },
+    {
+      "title": "Instructor web",
+      "description": "Dominando <b>tecnologías de alta calidad</b> para diseñar sistemas de software escalables, responsivos y de alto rendimiento.",
+      "button": "Ver más",
+      "link": "https://www.instagram.com/tecnoinfo.tech/",
+      "target_blank": true,
+      "image": "/src/assets/images/slides/background-2.jpg"
+    },
+    {
+      "title": "Historias capturadas y escritas",
+      "description": "Mis pasiones artísticas—fotografía y escritura—revelan la belleza oculta de la naturaleza, donde meticulosamente <b>equilibro lo técnico con la expresión artística.</b>",
+      "button": "Mi lado artístico",
+      "link": "https://www.instagram.com/cielosjosh/",
+      "target_blank": true,
+      "image": "/src/assets/images/slides/background-3.jpg"
+    }
+  ],
+  "who_i_am": {
+    "title": "¿Quién soy?",
+      "description": [
+      "<b>Con aproximadamente {years} años de experiencia</b> construyendo aplicaciones web escalables, mantenibles y centradas en el usuario, me concentro en entregar <b>soluciones funcionales</b> que aporten <b>beneficios tanto para clientes como para usuarios.</b>",
+      "Me destaco por <b>adaptarme rápidamente a nuevos desafíos</b> para crear soluciones web eficientes e impactantes. También soy un estudiante perpetuo de la tecnología, impulsado por una <b>profunda pasión por el aprendizaje continuo</b> y por mantenerme al día con las últimas tendencias del sector. <a class=\"open-modal\" role=\"button\">Más sobre mí.</a>"
+    ],
+    "modal": {
+      "contents": [
+        {
+          "title": "Mentor y educador",
+          "content": "Tuve el privilegio de trabajar como instructor en un programa de diplomatura en desarrollo web. Me encargué de <b>orientar a la próxima generación de desarrolladores</b>, compartiendo mis conocimientos sobre el ecosistema JavaScript y las tecnologías web fundamentales, como HTML, CSS, NodeJS, MySQL y muchas más.",
+          "image": "/src/assets/images/Diplomado-3.jpg"
+        },
+        {
+          "title": "Dedicados a la excelencia",
+          "content": "No me conformo con 'lo suficientemente bueno', por el contrario, me esfuerzo por <b>mejorar constantemente mis habilidades</b> y superar los límites de cada proyecto.",
+          "image": "/src/assets/images/codigo-3.jpg"
+        },
+        {
+          "title": "Más allá de la certificación",
+          "content": "Mi educación se aceleró realmente al ir <b>más allá del conocimiento teórico</b> y adentrarme en el ámbito de la creación práctica.",
+          "image": "/src/assets/images/codigo-4.jpg"
+        }
+      ]
+    }
+  },
+  "stack_and_portfolio": {
+    "title": "Stack y Portafolio",
+    "items": ["Languages", "Frontend", "Backend", "Databases", "Other Tools"],
+    "projects": [
+      {
+        "title": "Tablero de Bingo Papaya",
+        "description": "<b>Tablero de bingo digital para proyección de juego en tiempo real</b>. La plataforma muestra los sorteos más recientes y patrones ganadores. La aplicación automatiza el proceso, asegurando una experiencia de juego fluida y atractiva.",
+        "technologies": ["Javascript", "React", "Flask", "MongoDB"],
+        "img": "/src/assets/images/projects/bingo_papaya.png"
+      },
+      {
+        "title": "Academia Valentina App",
+        "description": "Desarrollé una <b>aplicación móvil integral para la gestión de cursos de repostería y cocina</b>. La app incluye funciones para la compra de cursos y realizar una encuesta para obtener el certificado, mejorando la eficiencia operativa y la experiencia del usuario, e incluye paneles de administrador y docente para la gestión de contenidos y cursos.",
+        "technologies": ["TypeScript", "React", "Django", "PostgreSQL", "MongoDB"],
+        "img": "/src/assets/images/projects/academia_valentina.jpeg"
+      },
+      {
+        "title": "MAVET Posts",
+        "description": "Desarrollé una plataforma pública para el 'Museo de Artes Visuales y del Espacio del Táchira' (MAVET). Este sistema robusto gestiona y muestra públicamente colecciones de arte, eventos, cursos y contenido educativo.",
+        "technologies": ["Python", "Flask", "MySQL"],
+        "img": "/src/assets/images/projects/mavet.png"
+      }
+    ],
+    "not_found": "No se encontraron proyectos con las tecnologías seleccionadas."
+  },
+  "experience": [
+    {
+      "job_title": "Analista de Soporte",
+      "company": {
+        "name": "ADN Software",
+        "logo": "/src/assets/images/companies/adn_software.svg"
+      },
+      "period": "Abr 2025 - May 2025",
+      "details": [
+        "Gestión los requerimientos de los clientes, <b>asegurando la satisfacción del proyecto y la entrega oportuna.</b>",
+        "Lideré la <b>implementación de homologación para tres clientes y negocios clave</b>, actualizando el software contable para optimizar sus procesos."
+      ],
+      "technologies": ["Excel", "MySQL"]
+    },
+    {
+      "job_title": "Desarrollador Full-Stack",
+      "company": {
+        "name": "Kunaisoft",
+        "logo": "/src/assets/images/companies/kunaisoft.svg"
+      },
+      "period": "Sep 2023 - Ene 2026",
+      "details": [
+        "Creación y desarrollo de una plataforma back-office para un <b>sistema Unified Threat Management (UTM).</b>",
+        "Migración de datos sin interrupciones entre sitios web, garantizando la integridad de los datos y la disponibilidad total del servicio."
+      ],
+      "technologies": ["TypeScript", "React", "TailwindCSS", "VueJS", "MySQL", "Make"]
+    },
+    {
+      "job_title": "Full-Stack e Instructor",
+      "company": {
+        "name": "TIDV Tech",
+        "logo": "/src/assets/images/companies/tidv_tech.svg"
+      },
+      "period": "Feb 2022 - Ago 2023",
+      "details": [
+        "Desarrollé y lancé una plataforma de ventas en línea, resultando en un <b>incremento del 30% en el tráfico del sitio web.</b>",
+        "Formé a dos cohortes en el <b>programa diplomado de desarrollo web</b>, cubriendo niveles intermedios y avanzados."
+      ],
+      "technologies": ["NextJS", "React", "Express", "MongoDB"]
+    }
+  ],
+  "contact_to_me": {
+    "title": "Contáctame",
+    "description": "Si tienes un proyecto en mente, un negocio que necesita una presencia en línea más sólida, o simplemente quieres conversar sobre cómo la tecnología puede ayudarte a alcanzar tus objetivos, no dudes en comunicarte. Espero con interés saber de ti. Selecciona una de estas opciones de contacto, y <b>en cuanto esté disponible, conectaré tu idea y necesidades con la realidad.</b>",
+    "form": {
+      "full_name": {
+        "label": "Nombre completo",
+        "placeholder": "Jonh Doe"
+      },
+      "phone": {
+        "label": "Número de Whatsapp",
+        "placeholder": "+1234567890"
+      },
+      "email": {
+        "label": "Correo",
+        "placeholder": "jonhdoe123@test.com"
+      },
+      "consult_type": {
+        "label": "Tipo de consulta",
+        "options": [
+          "Desarrollo de sitio web",
+          "Aplicación móvil",
+          "Plataforma",
+          "E-commerce",
+          "Otro"
+        ],
+        "placeholder": "Selecciona el tipo específico"
+      },
+      "bussiness_type": {
+        "label": "Tipo de negocio",
+        "options": [
+          "Startup",
+          "Negocio",
+          "Agencia",
+          "Empresa",
+          "Otro"
+        ],
+        "placeholder": "Selecciona el tipo específico"
+      },
+      "consult_details": {
+        "label": "Detalles de la consulta",
+        "placeholder": "Algo como: Necesito un sitio web para mi nuevo negocio que venda productos ecológicos..."
+      },
+      "buttons": {
+        "clear": "Limpiar formulario",
+        "submit": "Enviar"
+      }
+    }
+  }
+}

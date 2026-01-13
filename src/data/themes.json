@@ -1,0 +1,38 @@
+{
+  "light": {
+    "--primary-color": "#B0D1F4",
+    "--primary-light-color": "#CCDFFF",
+    "--primary-dark-color": "#91abc7",
+    "--secondary-color": "#144273",
+    "--secondary-light-color": "#0451A4",
+    "--tertiary-color": "#FFD6AC",
+    "--tertiary-hover-color": "#f9ddc2",
+    "--button-color": "#144273",
+    "--slide-background": "#0451A4d2",
+    "--slide-color": "#ffc382",
+    "--slide-light-color": "#fad0a2",
+    "--modal-bg": "#040e1af5",
+    "--modal-text": "#0863c4",
+    "--input-bg": "#FFFFFF",
+    "--input-text": "#4B5563",
+    "--body-gradient-end": "#CCDFFF"
+  },
+  "dark": {
+    "--primary-color": "#144273",
+    "--primary-light-color": "#0451A4",
+    "--primary-dark-color": "#0c2642",
+    "--secondary-color": "#B0D1F4",
+    "--secondary-light-color": "#CCDFFF",
+    "--tertiary-color": "#FFC282",
+    "--tertiary-hover-color": "#d8a56f",
+    "--button-color": "#144273",
+    "--slide-background": "#144273d2",
+    "--slide-color": "#ffc382",
+    "--slide-light-color": "#fad0a2",
+    "--modal-bg": "#040e1af5",
+    "--modal-text": "#0863c4",
+    "--input-bg": "#CCDFFF",
+    "--input-text": "#144273",
+    "--body-gradient-end": "#0c2642"
+  }
+}

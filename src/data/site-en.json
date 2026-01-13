@@ -1,0 +1,165 @@
+{
+  "slide": [
+    {
+      "title": "Full-Stack Developer",
+      "description": "Over {years} years building <b>professional and unique projects, bringing ideas to life</b>. From stunning interfaces to complex business logic.",
+      "button": "My Experience",
+      "link": "/#experience",
+      "target_blank": false,
+      "image": "/src/assets/images/slides/background-1.jpg"
+    },
+    {
+      "title": "Website Instructor",
+      "description": "Mastering <b>high-quality technologies</b> to architect scalable, responsive, and high-performance software systems.",
+      "button": "Check more",
+      "link": "https://www.instagram.com/tecnoinfo.tech/",
+      "target_blank": true,
+      "image": "/src/assets/images/slides/background-2.jpg"
+    },
+    {
+      "title": "Captured and written stories",
+      "description": "My artistic passions—photography and writing—unveil nature’s unseen beauty, where I meticulously <b>balance technical with artistic expression.</b>",
+      "button": "My artistic side",
+      "link": "https://www.instagram.com/cielosjosh/",
+      "target_blank": true,
+      "image": "/src/assets/images/slides/background-3.jpg"
+    }
+  ],
+  "who_i_am": {
+    "title": "Who I am?",
+    "description": ["<b>With ~{years} years of experience</b> building scalable, maintainable, and user-centric web applications, I focus on delivering <b>functional solutions</b> that provide <b>mutual benefits for both clients and users.</b>", "I excel at <b>adapting quickly to new challenges</b> to create efficient and impactful web solutions. I'm also a lifelong student of technology, driven by a <b>deep passion for continuous learning</b> and staying ahead of the latest industry trends. <a class=\"open-modal\" role=\"button\">More about me.</a>"],
+    "modal": {
+      "contents": [
+        {
+          "title": "Mentor & Educator",
+          "content": "I had the privilege of serving as an instructor for a web development diploma program. I was responsible for <b'>guiding the next generation of developers</b>, sharing my expertise in the JavaScript ecosystem and core web technologies, such as HTML, CSS, NodeJS, MySQL, and even more.",
+          "image": "/src/assets/images/Diplomado-3.jpg"
+        },
+        {
+          "title": "Dedicated to Excellence",
+          "content": "I don't settle for 'good enough'; instead, I strive to <b'>constantly improve my skills</b> and push the boundaries of every project.",
+          "image": "/src/assets/images/codigo-3.jpg"
+        },
+        {
+          "title": "Beyond Certification",
+          "content": "My education truly accelerated when I went <b'>beyond theoretical knowledge</b> and delved into the realm of practical creation.",
+          "image": "/src/assets/images/codigo-4.jpg"
+        }
+      ]
+    }
+  },
+  "stack_and_portfolio": {
+    "title": "Stack & Portfolio",
+    "items": ["Languages", "Frontend", "Backend", "Databases", "Other Tools"],
+    "projects": [
+      {
+        "title": "Bingo Papaya Board",
+        "description": "<b>Digital bingo board for real-time game projection</b>. The platform displays the most recent draws and winning patterns. The application automates the process, ensuring a smooth and engaging gaming experience.",
+        "technologies": ["Javascript", "React", "Flask", "MongoDB"],
+        "img": "/src/assets/images/projects/bingo_papaya.png"
+      },
+      {
+        "title": "Academia Valentina App",
+        "description": "Developed a <b>comprehensive mobile application for managing baking and cooking courses</b>. The app includes features for courses purchase, and take a survey to get the certificate, enhancing operational efficiency and user experience, including admin and teacher panel for content and courses management.",
+        "technologies": ["TypeScript", "React", "Django", "PostgreSQL", "MongoDB"],
+        "img": "/src/assets/images/projects/academia_valentina.jpeg"
+      },
+      {
+        "title": "MAVET Posts",
+        "description": "Developed a public-facing platform for the 'Museo de Artes Visuales y del Espacio del Táchira' (MAVET). This robust system handles the <b>management and public display of art collections, events, courses, and educational content.</b>",
+        "technologies": ["Python", "Flask", "MySQL"],
+        "img": "/src/assets/images/projects/mavet.png"
+      }
+    ],
+    "not_found": "No projects found with the selected technologies."
+  },
+  "experience": [
+    {
+      "job_title": "Support Analyst",
+      "company": {
+        "name": "ADN Software",
+        "logo": "/src/assets/images/companies/adn_software.svg"
+      },
+      "period": "Apr 2025 - May 2025",
+      "details": [
+        "Managed client requirements, <b>ensuring project satisfaction and timely delivery.</b>",
+        "Led the <b>implementation of homologation for three key clients and businesses</b>, upgrading the accounting software to optimize their processes."
+      ],
+      "technologies": ["Excel", "MySQL"]
+    },
+    {
+      "job_title": "Full-Stack Developer",
+      "company": {
+        "name": "Kunaisoft",
+        "logo": "/src/assets/images/companies/kunaisoft.svg"
+      },
+      "period": "Sep 2023 - Jan 2026",
+      "details": [
+        "Creation and development of a back-office platform for a <b>Unified Threat Management (UTM) system.</b>",
+        "Seamless <b>data migration between websites</b>, ensuring data integrity and full service availability."
+      ],
+      "technologies": ["TypeScript", "React", "TailwindCSS", "VueJS", "MySQL", "Make"]
+    },
+    {
+      "job_title": "Full-Stack and Instructor",
+      "company": {
+        "name": "TIDV Tech",
+        "logo": "/src/assets/images/companies/tidv_tech.svg"
+      },
+      "period": "Feb 2022 - Aug 2023",
+      "details": [
+        "Developed and launched an online sales platform, resulting in a <b>30% increase in website traffic.</b>",
+        "Instructed two cohorts in the <b>web development diploma program</b>, covering intermediate and advanced levels."
+      ],
+      "technologies": ["NextJS", "React", "Express", "MongoDB"]
+    }
+  ],
+  "contact_to_me": {
+    "title": "Contact Me",
+    "description": "If you have a project in mind, a business that needs a stronger online presence, or just want to discuss how technology can help you achieve your goals, feel free to reach out. I look forward to hearing from you. Select one of this contact options, and <b>as soon as i'm available, will connect your idea and needs to a reality!</b>",
+    "form": {
+      "full_name": {
+        "label": "FullName",
+        "placeholder": "Jonh Doe"
+      },
+      "phone": {
+        "label": "Whatsapp Number",
+        "placeholder": "+1234567890"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "jonhdoe123@test.com"
+      },
+      "consult_type": {
+        "label": "Consult type",
+        "options": [
+          "Website development",
+          "Mobile App",
+          "Remote Platform",
+          "E-commerce",
+          "Other"
+        ],
+        "placeholder": "Select specific type"
+      },
+      "bussiness_type": {
+        "label": "Bussiness type",
+        "options": [
+          "Startup",
+          "Business",
+          "Agency",
+          "Enterprise",
+          "Other"
+        ],
+        "placeholder": "Select specific type"
+      },
+      "consult_details": {
+        "label": "Consult details",
+        "placeholder": "Something like: I need a website for my new business that sells eco-friendly products..."
+      },
+      "buttons": {
+        "clear": "Clear Form",
+        "submit": "Submit"
+      }
+    }
+  }
+}

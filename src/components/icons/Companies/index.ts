@@ -1,0 +1,1 @@
+export { COMPANY_ICONS, type CompanyIcon } from './Companies'

@@ -5,13 +5,12 @@ import LanguageToggle from "./LanguageToggle.vue";
 
 const isExpanded = ref(false);
 
-const navItems = [
-  { label: "Home", href: "#home" },
-  { label: "Who I Am?", href: "#who-i-am" },
-  { label: "Stack & Portfolio", href: "#stack-portfolio" },
-  { label: "Experience", href: "#experience" },
-  { label: "Contact Me!", href: "#contact-me" },
-];
+defineProps<{
+  navItems: {
+    label: string;
+    href: string;
+  }[]
+}>();
 </script>
 
 <template>

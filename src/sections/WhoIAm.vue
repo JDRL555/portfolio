@@ -69,7 +69,7 @@
 
       <div class="w-full lg:w-[40%] flex flex-col items-center">
         <img 
-          src="../assets/images/Foto perfil.jpeg" 
+          src="/images/Foto perfil.jpeg" 
           alt="Profile Picture"
           class="rounded-full w-48 md:w-[20rem] border-4 border-[var(--secondary-color)] mb-5"
         >

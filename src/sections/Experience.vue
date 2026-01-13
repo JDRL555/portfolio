@@ -2,7 +2,6 @@
 import { ref, computed } from 'vue'
 import Icons from '../components/icons/Icons.vue'
 import { TECH_ICONS, type TechIconName } from '../components/icons/Techs/Techs'
-import { useLanguageStore } from '../stores'
 import SectionLayout from './SectionLayout.vue'
 import { COMPANY_ICONS, type CompanyIcon } from '../components/icons/Companies'
 
@@ -10,10 +9,9 @@ const props = defineProps<{
   content: any
 }>()
 
-const languageStore = useLanguageStore()
 const activeIndex = ref(1)
 
-const experiences = computed(() => props.content.experience)
+const experiences = computed(() => props.content.experience.companies)
 
 const selectCard = (index: number) => {
   activeIndex.value = index
@@ -117,12 +115,10 @@ const getIconName = (tech: string): CompanyIcon => {
   }
   return "kunaisoft"
 }
-
-const title = computed(() => languageStore.language === 'en' ? 'Experience' : 'Experiencia')
 </script>
 
 <template>
-  <SectionLayout :title="title">
+  <SectionLayout :title="content.experience.title">
     <!-- Desktop Card Deck -->
     <div class="hidden md:flex relative h-[650px] w-full max-w-6xl mx-auto items-center justify-center perspective-1000 pt-10">
       <div 

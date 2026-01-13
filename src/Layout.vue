@@ -50,10 +50,19 @@ watch(() => themeStore.theme, (value) => {
 
 const content = computed(() => languageStore.language === "en" ? en : es)
 
+const navItems = computed(() => [
+  { label:  languageStore.language === 'en' ? "Home" : "Inicio", href: "#home" },
+  { label: content.value.who_i_am.title, href: "#who-i-am" },
+  { label: content.value.stack_and_portfolio.title, href: "#stack-portfolio" },
+  { label: content.value.experience.title, href: "#experience" },
+  { label: content.value.contact_to_me.title, href: "#contact-me" },
+])
+
 </script>
 
 <template>
-  <NavigationSidebar />
+  <NavigationSidebar :navItems="navItems" />
+
   <main class="transition-all duration-300">
     <div id="home">
       <Carousel />

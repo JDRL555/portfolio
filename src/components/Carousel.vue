@@ -84,7 +84,7 @@ setInterval(() => {
           :style="{ backgroundColor: 'var(--slide-background)', color: 'var(--slide-color)' }"
         >
           <h2 class="text-3xl sm:text-4xl md:text-6xl text-white font-bold mb-4 md:mb-7">{{ slide.title }}</h2>
-          <p class="text-base sm:text-xl md:text-2xl w-full md:w-2/3 mb-4 md:mb-7 text-white" v-html="parseYears(slide.description)"></p>
+          <p class="text-base sm:text-xl md:text-2xl w-[80%] md:w-2/3 mb-4 md:mb-7 text-white" v-html="parseYears(slide.description)"></p>
           <a 
             :href="slide.link"
             :target="slide.target_blank ? '_blank' : '_self'"

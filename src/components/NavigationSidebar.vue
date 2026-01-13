@@ -2,8 +2,11 @@
 import { ref } from "vue";
 import ThemeToggle from "./ThemeToggle.vue";
 import LanguageToggle from "./LanguageToggle.vue";
+import { useLanguageStore } from "../stores";
 
 const isExpanded = ref(false);
+
+const store = useLanguageStore();
 
 defineProps<{
   navItems: {
@@ -33,7 +36,7 @@ defineProps<{
     >
       <!-- Collapsed State Indicator (Button) -->
       <div
-        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-300 flex flex-col items-center gap-2"
+        class="absolute top-[15%] left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-300 flex flex-col items-center gap-2"
         :class="
           isExpanded
             ? 'opacity-0 translate-x-10 pointer-events-none'
@@ -93,7 +96,7 @@ defineProps<{
           <h3
             class="font-bold text-lg mb-4 flex items-center gap-2 text-[var(--secondary-color)]"
           >
-            <span class="text-xl">⚙️</span> Settings
+            <span class="text-xl">⚙️</span> {{ store.language === 'en' ? 'Settings' : 'Configuración' }}
           </h3>
           <div class="flex gap-3 justify-between">
             <ThemeToggle class="flex-1 justify-center flex" />

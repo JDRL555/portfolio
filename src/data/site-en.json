@@ -4,18 +4,24 @@
       "title": "Full-Stack Developer",
       "description": "Over {years} years building <b>professional and unique projects, bringing ideas to life</b>. From stunning interfaces to complex business logic.",
       "button": "My Experience",
+      "link": "/#experience",
+      "target_blank": false,
       "image": "/src/assets/images/slides/background-1.jpg"
     },
     {
       "title": "Website Instructor",
       "description": "Mastering <b>high-quality technologies</b> to architect scalable, responsive, and high-performance software systems.",
       "button": "Check more",
+      "link": "https://www.instagram.com/tecnoinfo.tech/",
+      "target_blank": true,
       "image": "/src/assets/images/slides/background-2.jpg"
     },
     {
       "title": "Captured and written stories",
       "description": "My artistic passions—photography and writing—unveil nature’s unseen beauty, where I meticulously <b>balance technical with artistic expression.</b>",
       "button": "My artistic side",
+      "link": "https://www.instagram.com/cielosjosh/",
+      "target_blank": true,
       "image": "/src/assets/images/slides/background-3.jpg"
     }
   ],

@@ -20,17 +20,17 @@ const contactMethod = ref<"email" | "whatsapp">("email");
 </script>
 
 <template>
-  <section class="m-15 mb-24">
+  <section v-scroll-reveal class="py-10 px-4 md:px-12 w-full max-w-7xl mx-auto mb-24">
     <div class="flex flex-col w-full">
-      <div class="ml-5">
+      <div class="w-full">
         <div>
           <div class="w-full">
-            <h1 class="text-5xl font-bold mb-6 text-[var(--title-color)]">
+            <h1 class="text-3xl md:text-5xl font-bold mb-6 text-[var(--title-color)]">
               {{ content.contact_to_me.title }}
             </h1>
             <p
               v-html="parseYears(content.contact_to_me.description)"
-              class="text-xl mb-10 block opacity-80"
+              class="text-lg md:text-xl mb-10 block opacity-80"
             ></p>
           </div>
 
@@ -38,66 +38,38 @@ const contactMethod = ref<"email" | "whatsapp">("email");
             <!-- Toggle Icons -->
             <button
               @click="contactMethod = 'email'"
-              class="p-3 rounded-full transition-all duration-300 hover:scale-110"
+              class="p-3 rounded-full transition-all duration-300 hover:scale-110 flex items-center justify-center w-24 h-24"
               :class="
                 contactMethod === 'email'
                   ? 'shadow-inner'
                   : '!bg-transparent !text-[var(--secondary-color)] !border-none'
               "
             >
-              <Icons width="70" height="70" icon-name="email" />
-              <!-- Asumiendo que añadas un icono 'email' -->
+              <Icons width="100%" height="100%" icon-name="email" />
             </button>
 
             <button
               @click="contactMethod = 'whatsapp'"
-              class="p-3 rounded-full transition-all duration-300 hover:scale-110"
+              class="p-3 rounded-full transition-all duration-300 hover:scale-110 flex items-center justify-center w-24 h-24"
               :class="
                 contactMethod === 'whatsapp'
                   ? 'shadow-inner'
                   : '!bg-transparent !text-[var(--secondary-color)] !border-none'
               "
             >
-              <Icons width="70" height="70" icon-name="whatsapp" />
-              <!-- Asumiendo que añadas un icono 'whatsapp' -->
+              <Icons width="100%" height="100%" icon-name="whatsapp" />
             </button>
           </div>
         </div>
 
-        <!-- Mobile controls (duplicated for responsivness if needed, or simple stacking) -->
-        <div class="flex md:hidden gap-6 justify-center mb-10">
-          <button
-            @click="contactMethod = 'email'"
-            class="p-3 rounded-full border-2"
-            :class="
-              contactMethod === 'email'
-                ? 'border-[var(--secondary-color)] bg-blue-50'
-                : 'border-gray-200'
-            "
-          >
-            <Icons width="40" height="40" icon-name="email" />
-          </button>
-
-          <button
-            @click="contactMethod = 'whatsapp'"
-            class="p-3 rounded-full border-2"
-            :class="
-              contactMethod === 'whatsapp'
-                ? 'border-[#25D366] bg-green-50'
-                : 'border-gray-200'
-            "
-          >
-            <Icons width="40" height="40" icon-name="whatsapp" />
-          </button>
-        </div>
-
-        <div class="mt-5">
+        <div class="mt-5 w-full">
           <Transition name="fade" mode="out-in">
             <ContactEmailForm
               v-if="contactMethod === 'email'"
               :labels="content.contact_to_me.form"
+              class="w-full"
             />
-            <ContactWhatsAppForm v-else :labels="content.contact_to_me.form" />
+            <ContactWhatsAppForm v-else :labels="content.contact_to_me.form" class="w-full" />
           </Transition>
         </div>
       </div>

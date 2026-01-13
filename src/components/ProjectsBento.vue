@@ -39,13 +39,16 @@ const getIconName = (tech: string): TechIconName | null => {
       v-for="(project, index) in filteredProjects" 
       :key="project.title"
       class="bg-blue-50 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col group"
-      :class="{ 'md:col-span-2 md:flex-row': index === 0 && filteredProjects.length > 1 }"
+      :class="{ 
+        'md:col-span-2 md:flex-row': index === 0 && filteredProjects.length > 1,
+        'md:col-span-3 md:flex-row': index === filteredProjects.length - 1 && filteredProjects.length === 3 
+      }"
     >
       <!-- Image Container -->
       <div 
         class="overflow-hidden relative"
         :class="[
-          (index === 0 && filteredProjects.length > 1) ? 'w-full md:w-1/2 h-64 md:h-auto' : 'w-full h-48'
+          (index === 0 && filteredProjects.length > 1) || (index === filteredProjects.length - 1 && filteredProjects.length === 3) ? 'w-full md:w-1/2 h-64 md:h-auto' : 'w-full h-48'
         ]"
       >
         <img 
@@ -66,7 +69,7 @@ const getIconName = (tech: string): TechIconName | null => {
       <div 
         class="p-6 flex flex-col justify-between"
         :class="[
-          (index === 0 && filteredProjects.length > 1) ? 'w-full md:w-1/2' : 'w-full flex-1'
+          (index === 0 && filteredProjects.length > 1) || (index === filteredProjects.length - 1 && filteredProjects.length === 3) ? 'w-full md:w-1/2' : 'w-full flex-1'
         ]"
       >
         <div>
@@ -95,7 +98,7 @@ const getIconName = (tech: string): TechIconName | null => {
     </div>
     
     <!-- Empty State -->
-    <div v-if="filteredProjects.length === 0" class="col-span-full text-center py-10 text-xl text-white opacity-80">
+    <div v-if="filteredProjects.length === 0" class="col-span-full text-center py-10 text-xl text-[var(--secondary-color)] opacity-80">
       {{ not_found }}
     </div>
   </div>

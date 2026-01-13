@@ -29,12 +29,10 @@ const navItems = [
 
     <!-- Sidebar -->
     <nav
-      class="fixed left-0 top-0 h-full z-50 bg-[var(--primary-color)] text-[var(--secondary-color)] shadow-2xl transition-all duration-300 ease-in-out flex flex-col justify-between py-12 overflow-hidden border-r border-[var(--primary-light-color)]"
-      :class="isExpanded ? 'w-72 px-8' : 'w-10 cursor-pointer'"
-      @mouseenter="isExpanded = true"
-      @mouseleave="isExpanded = false"
+      class="fixed left-0 top-0 h-full z-50 text-[var(--secondary-color)] transition-all duration-300 ease-in-out flex flex-col justify-between py-12 overflow-hidden border-r border-[var(--primary-light-color)]"
+      :class="isExpanded ? 'w-72 px-8 bg-[var(--primary-color)] shadow-2xl' : 'w-12 cursor-pointer bg-transparent !border-none'"
     >
-      <!-- Collapsed State Indicator -->
+      <!-- Collapsed State Indicator (Button) -->
       <div
         class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-300 flex flex-col items-center gap-2"
         :class="
@@ -43,20 +41,25 @@ const navItems = [
             : 'opacity-100'
         "
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="2.5"
-          stroke="currentColor"
-          class="w-8 h-8 text-[var(--secondary-color)] slide-hint"
+        <button 
+          @click.stop="isExpanded = true"
+          class="!bg-[var(--primary-color)] !p-2 !rounded-md !border-none shadow-lg hover:scale-110 transition-transform cursor-pointer animate-nudge hover:animate-none"
         >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="m8.25 4.5 7.5 7.5-7.5 7.5"
-          />
-        </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2.5"
+            stroke="currentColor"
+            class="w-6 h-6 text-[var(--secondary-color)]"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m8.25 4.5 7.5 7.5-7.5 7.5"
+            />
+          </svg>
+        </button>
       </div>
 
       <!-- Navigation Links -->
@@ -102,7 +105,15 @@ const navItems = [
     </nav>
   </div>
 </template>
-
+<style scoped>
+@keyframes nudge {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(4px); }
+}
+.animate-nudge {
+  animation: nudge 1.5s infinite ease-in-out;
+}
+</style>
 <style scoped>
 @keyframes slide-right {
   0%,

@@ -5,10 +5,10 @@
 </script>
 
 <template>
-  <section class="m-15">
-    <div class="flex items-center justify-between gap-12 w-full">
-      <div class="w-full ml-5">
-        <h1 class="text-5xl font-bold mb-8">{{ title }}</h1>
+  <section v-scroll-reveal class="py-10 px-4 md:px-12 w-full overflow-hidden">
+    <div class="flex flex-col items-start w-full max-w-7xl mx-auto">
+      <div class="w-full">
+        <h1 class="text-3xl md:text-5xl font-bold mb-8 ml-2 md:ml-5 break-words">{{ title }}</h1>
         <slot></slot>
       </div>
     </div>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted, watch } from "vue";
-import { useCountryStore, useThemeStore } from "../../stores";
+import { useCountryStore, useThemeStore, useLanguageStore } from "../../stores";
 import { parseCountriesNumber } from "../../utils/parsers";
 import type { FormattedCountry } from "../../services/CountriesAPI";
 
@@ -9,6 +9,7 @@ const props = defineProps<{
 }>();
 
 const { countries } = useCountryStore();
+const languageStore = useLanguageStore();
 
 const store = useThemeStore()
 const buttonColors = ref(store.theme === 'dark' ? '!border-[var(--tertiary-color)] !text-[var(--tertiary-color)]' : '')
@@ -55,17 +56,21 @@ const submitForm = () => {
   if (!form.value.phone || !form.value.fullName) return;
 
   // TU NÚMERO DE TELÉFONO PERSONAL AQUÍ (Destino)
-  const myNumber = "584241234567"; // Reemplázalo con tu número real sin símbolos
+  const myNumber = "584127343339"; // Reemplázalo con tu número real sin símbolos
 
-  const message =
-    `*New Contact Request*\n\n` +
-    `*Name:* ${form.value.fullName}\n` +
-    `*Client Phone:* ${selectedCountry.value?.code || ""} ${
-      form.value.phone
-    }\n` +
-    `*Consult Type:* ${form.value.consultType}\n` +
-    `*Business Type:* ${form.value.businessType}\n` +
-    `*Details:* ${form.value.details}`;
+  const isEn = languageStore.language === 'en';
+  
+  const message = isEn 
+    ? `*Hello, my name is ${form.value.fullName}*\n\n` +
+      `I'm interested in *${form.value.consultType}* for a *${form.value.businessType}*.\n\n` +
+      `*Details:*\n${form.value.details}\n\n` +
+      `*My contact info:*\n` +
+      `Phone: ${selectedCountry.value?.code || ""} ${form.value.phone}`
+    : `*Hola, mi nombre es ${form.value.fullName}*\n\n` +
+      `Estoy interesado en *${form.value.consultType}* para un/a *${form.value.businessType}*.\n\n` +
+      `*Detalles:*\n${form.value.details}\n\n` +
+      `*Mis datos de contacto:*\n` +
+      `Teléfono: ${selectedCountry.value?.code || ""} ${form.value.phone}`;
 
   const url = `https://wa.me/${myNumber}?text=${encodeURIComponent(message)}`;
   window.open(url, "_blank");
@@ -90,12 +95,12 @@ watch(store, (newStore) => {
 <template>
   <form
     @submit.prevent="submitForm"
-    class="bg-[var(--primary-color)] p-8 rounded-3xl border-2 border-[var(--primary-color)] shadow-lg transition-all duration-300 hover:-translate-y-2"
+    class="bg-[var(--primary-color)] p-8 rounded-3xl border-2 border-[var(--primary-color)] shadow-lg transition-all duration-300 hover:-translate-y-2 w-full max-w-none"
   >
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 pb-6">
       <!-- Phone Input with Country Code -->
       <div class="flex flex-col">
-        <label class="font-bold text-lg text-[var(--text-color)] mb-2"
+        <label class="font-bold text-base md:text-lg text-[var(--text-color)] mb-2"
           >{{ labels.phone.label }} <span class="text-red-400">*</span></label
         >
 
@@ -104,7 +109,7 @@ watch(store, (newStore) => {
           <div
             @click="isDropdownOpen = !isDropdownOpen"
             ref="dropdownRef"
-            class="flex items-center justify-between p-3 rounded-xl border border-gray-300 w-[160px] cursor-pointer select-none hover:border-[var(--secondary-color)]"
+            class="flex items-center justify-between p-2 md:p-3 rounded-xl border border-gray-300 w-[120px] md:w-[160px] cursor-pointer select-none hover:border-[var(--secondary-color)]"
             :class="dropdownColors"
           >
             <div class="flex items-center gap-2">
@@ -113,7 +118,7 @@ watch(store, (newStore) => {
                 class="w-6 h-4 object-cover rounded-sm"
                 v-if="selectedCountry.flag"
               />
-              <span class="text-lg font-medium text-gray-600">{{
+              <span class="text-xs md:text-lg font-medium text-gray-600">{{
                 selectedCountry.code
               }}</span>
             </div>
@@ -145,7 +150,7 @@ watch(store, (newStore) => {
                 class="w-6 h-4 object-cover rounded-sm shadow-sm"
               />
               <span
-                class="text-sm group-hover:text-[var(--secondary-light-color)]"
+                class="text-xs md:text-sm group-hover:text-[var(--secondary-light-color)]"
                 :class="
                   c.code === selectedCountry.code
                     ? 'text-[var(--secondary-color)]'
@@ -162,13 +167,13 @@ watch(store, (newStore) => {
             required
             type="number"
             placeholder="4121234567"
-            class="p-3 rounded-xl border text-lg border-gray-300 w-full outline-none focus:border-[var(--secondary-color)]"
+            class="p-2 md:p-3 rounded-xl border text-sm md:text-lg border-gray-300 w-full outline-none focus:border-[var(--secondary-color)]"
           />
         </div>
       </div>
 
       <div class="flex flex-col">
-        <label class="font-bold text-lg text-[var(--text-color)] mb-2"
+        <label class="font-bold text-base md:text-lg text-[var(--text-color)] mb-2"
           >{{ labels.full_name.label }}
           <span class="text-red-400">*</span></label
         >
@@ -177,19 +182,19 @@ watch(store, (newStore) => {
           required
           type="text"
           :placeholder="labels.full_name.placeholder"
-          class="p-3 rounded-xl border text-lg border-gray-300 outline-none focus:border-[var(--secondary-color)]"
+          class="p-2 md:p-3 rounded-xl border text-sm md:text-lg border-gray-300 outline-none focus:border-[var(--secondary-color)]"
         />
       </div>
 
       <div class="flex flex-col">
-        <label class="font-bold text-lg text-[var(--text-color)] mb-2"
+        <label class="font-bold text-base md:text-lg text-[var(--text-color)] mb-2"
           >{{ labels.consult_type.label }}
           <span class="text-red-400">*</span></label
         >
         <select
           v-model="form.consultType"
           required
-          class="p-3 rounded-xl border text-lg border-gray-300 bg-white outline-none focus:border-[var(--secondary-color)]"
+          class="p-2 md:p-3 rounded-xl border text-sm md:text-lg border-gray-300 bg-white outline-none focus:border-[var(--secondary-color)]"
         >
           <option value="" disabled selected>
             {{ labels.consult_type.placeholder }}
@@ -205,14 +210,14 @@ watch(store, (newStore) => {
       </div>
 
       <div class="flex flex-col">
-        <label class="font-bold text-lg text-[var(--text-color)] mb-2"
+        <label class="font-bold text-base md:text-lg text-[var(--text-color)] mb-2"
           >{{ labels.bussiness_type.label }}
           <span class="text-red-400">*</span></label
         >
         <select
           v-model="form.businessType"
           required
-          class="p-3 rounded-xl border text-lg border-gray-300 bg-white outline-none focus:border-[var(--secondary-color)]"
+          class="p-2 md:p-3 rounded-xl border text-sm md:text-lg border-gray-300 bg-white outline-none focus:border-[var(--secondary-color)]"
         >
           <option value="" disabled selected>
             {{ labels.bussiness_type.placeholder }}
@@ -229,7 +234,7 @@ watch(store, (newStore) => {
     </div>
 
     <div class="flex flex-col mt-6">
-      <label class="font-bold text-lg text-[var(--text-color)] mb-2"
+      <label class="font-bold text-base md:text-lg text-[var(--text-color)] mb-2"
         >{{ labels.consult_details.label }}
         <span class="text-red-400">*</span></label
       >
@@ -238,24 +243,25 @@ watch(store, (newStore) => {
         required
         rows="4"
         :placeholder="labels.consult_details.placeholder"
-        class="p-3 rounded-xl border text-lg border-gray-300 outline-none focus:border-[var(--secondary-color)] resize-none"
+        class="p-2 md:p-3 rounded-xl border text-sm md:text-lg border-gray-300 outline-none focus:border-[var(--secondary-color)] resize-none"
       ></textarea>
     </div>
 
-    <div class="flex gap-4 mt-8">
+    <div class="flex flex-col md:flex-row gap-4 mt-8">
+      <button
+        type="button"
+        @click="submitForm"
+        class="px-6 py-2 md:px-8 md:py-3 rounded-xl bg-orange-300 text-gray-800 font-bold hover:bg-orange-400 transition-colors shadow-md text-sm md:text-base order-1 md:order-2"
+      >
+        {{ labels.buttons.submit }}
+      </button>
       <button
         type="button"
         @click="clearForm"
-        class="px-6 py-3 rounded-xl transition-colors !bg-[var(--primary-color)] border-2"
+        class="px-4 py-2 md:px-6 md:py-3 rounded-xl transition-colors !bg-[var(--primary-color)] border-2 text-sm md:text-base order-2 md:order-1"
         :class="buttonColors"
       >
         {{ labels.buttons.clear }}
-      </button>
-      <button
-        @click="submitForm"
-        class="px-8 py-3 rounded-xl bg-orange-300 text-gray-800 font-bold hover:bg-orange-400 transition-colors shadow-md"
-      >
-        {{ labels.buttons.submit }}
       </button>
     </div>
   </form>

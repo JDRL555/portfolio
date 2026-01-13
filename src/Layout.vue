@@ -54,7 +54,7 @@ const content = computed(() => languageStore.language === "en" ? en : es)
 
 <template>
   <NavigationSidebar />
-  <main>
+  <main class="transition-all duration-300">
     <div id="home">
       <Carousel />
     </div>

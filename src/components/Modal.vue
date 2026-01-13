@@ -35,7 +35,7 @@ const panelState = computed(() => {
     @click.self="emit('update:open', false)"
     :class="`fixed inset-0 bg-[var(--modal-bg)] flex items-center justify-center z-50 ${props.open ? 'opacity-100' : 'opacity-0 pointer-events-none'} transition-opacity duration-300`"
   >
-    <div id="modal" :class="`bg-gradient-to-b from-[var(--tertiary-color)] to-100% text-gray-200 font-normal rounded-lg shadow-lg p-16 w-[80%] max-h-[90%] overflow-y-auto ${panelState}`">
+    <div id="modal" :class="`bg-gradient-to-b from-[var(--primary-color)] to-100% text-gray-200 font-normal rounded-lg shadow-lg p-16 w-[80%] max-h-[90%] overflow-y-auto ${panelState}`">
       <slot></slot>
     </div>
   </div>

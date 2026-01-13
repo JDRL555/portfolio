@@ -77,11 +77,11 @@
 </script>
 
 <template>
-  <section class="m-15">
-    <div class="flex items-center justify-between gap-12 w-full">
-      <div class="w-full ml-5">
-        <h1 class="text-5xl font-bold mb-8">{{ content.stack_and_portfolio.title }}</h1>
-        <div class="pt-5 flex justify-between w-full flex-wrap">
+  <section v-scroll-reveal class="py-10 px-4 md:px-12 w-full max-w-7xl mx-auto">
+    <div class="flex flex-col w-full">
+      <div class="w-full">
+        <h1 class="text-3xl md:text-5xl font-bold mb-8">{{ content.stack_and_portfolio.title }}</h1>
+        <div class="pt-5 flex gap-2 w-full flex-wrap">
           <div 
             v-for="item in content.stack_and_portfolio.items" 
             :key="item"
@@ -91,7 +91,7 @@
           >
             <button 
               :class="[
-                'px-4 py-2 rounded-full mr-2 mb-2 transition flex items-center gap-2',
+                'px-4 py-2 rounded-full mb-2 transition flex items-center gap-2 text-sm md:text-base',
                 isCategorySelected(item) 
                   ? 'bg-[var(--tertiary-color)] text-[var(--button-color)]' 
                   : '!bg-transparent !border-none hover:!bg-[var(--primary-color-dark)]' + textColors

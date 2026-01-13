@@ -2,7 +2,6 @@
 import { ref, computed } from 'vue'
 import Icons from '../components/icons/Icons.vue'
 import { TECH_ICONS, type TechIconName } from '../components/icons/Techs/Techs'
-import { useLanguageStore } from '../stores'
 import SectionLayout from './SectionLayout.vue'
 import { COMPANY_ICONS, type CompanyIcon } from '../components/icons/Companies'
 
@@ -10,7 +9,6 @@ const props = defineProps<{
   content: any
 }>()
 
-const languageStore = useLanguageStore()
 const activeIndex = ref(1)
 
 const experiences = computed(() => props.content.experience.companies)
